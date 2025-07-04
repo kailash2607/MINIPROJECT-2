@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Public IP Address Viewer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .ip-box {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      display: inline-block;
+    }
+
+    .ip-label {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .ip-address {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: #3498db;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ip-box">
+    <div class="ip-label">Your Public IP Address:</div>
+    <div class="ip-address" id="ipDisplay">Loading...</div>
+    <button onclick="getIPAddress()">Refresh</button>
+  </div>
+
+  <!-- Link to external JS -->
+  <script src="script.js"></script>
+</body>
+</html>
